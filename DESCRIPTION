@@ -1,0 +1,17 @@
+Package: gpxmap
+Title: Load GPS tracks from various sources and plot them
+Version: 0.0.0.9000
+Authors@R: person("Martin", "Rüßler", email = "martin.ruessler@mailbox.org", role = c("aut", "cre"))
+Description: This package provides import and plotting functions for GPS tracks
+    of various origin.
+Depends:
+    R (>= 3.3.2),
+    dplyr,
+    ggmap,
+    ggplot2,
+    plotKML,
+    rgdal
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1
