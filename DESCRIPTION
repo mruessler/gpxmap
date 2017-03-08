@@ -1,12 +1,14 @@
 Package: gpxmap
 Title: Load GPS tracks from various sources and plot them
-Version: 0.0.0.9000
+Version: 1.0.0.001
 Authors@R: person("Martin", "Rüßler", email = "martin.ruessler@mailbox.org", role = c("aut", "cre"))
+URL: https://gitlab.com/mrub/gpxmap
+BugReports: https://gitlab.com/mrub/gpxmap/issues
 Description: This package provides import and plotting functions for GPS tracks
     of various origin.
 Depends:
-    R (>= 3.3.2),
-    dplyr,
+    R (>= 3.3.2)
+Imports: dplyr,
     ggmap,
     ggplot2,
     plotKML,
