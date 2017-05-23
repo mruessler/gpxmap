@@ -1,7 +1,8 @@
-image: rocker/rstudio
+image: rocker/tidyverse
 test:
     script:
-        - R -e 'install.packages(c("dplyr", "ggmap", "ggplot2", "plotKML", "rgdal"))'
+        - R -e 'devtools::install_github("dkahle/ggmap")'
+        - R -e 'install.packages(c("plotKML", "rgdal"))'
         - R CMD build . --no-build-vignettes --no-manual
         - PKG_FILE_NAME=$(ls -1t *.tar.gz | head -n 1)
         - R CMD check "${PKG_FILE_NAME}" --no-build-vignettes --no-manual
