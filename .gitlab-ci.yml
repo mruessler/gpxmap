@@ -1,6 +1,12 @@
 image: rocker/tidyverse
-test:
+stages:
+    - install
+    - test
+install:
+    stage: install
     script:
+        - apt-get update -qq
+        - apt-get install -y libjpeg-dev libgdal1-dev libproj-dev
         - R -e 'devtools::install_github("dkahle/ggmap")'
         - R -e 'install.packages(c("plotKML", "rgdal"))'
         - R CMD build . --no-build-vignettes --no-manual
